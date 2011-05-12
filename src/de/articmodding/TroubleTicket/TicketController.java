@@ -78,6 +78,10 @@ public class TicketController {
 		List<Ticket> tickets = model.getTicketList();		
 		Session session = sessionFactory.openSession();
 		for(Ticket t : tickets) {
+
+			session.beginTransaction();
+			session.saveOrUpdate(t);
+			session.getTransaction().commit();
 			
 			List<TicketReply> replies = t.getReplies();
 			for(TicketReply r : replies) {
@@ -87,9 +91,6 @@ public class TicketController {
 					session.getTransaction().commit();
 				}
 			}
-			session.beginTransaction();
-			session.saveOrUpdate(t);
-			session.getTransaction().commit();
 		}
 		session.close();
 	}

@@ -13,7 +13,7 @@
             </manifest>
             <zipfileset src="jar-in-jar-loader.zip"/>
             <fileset dir="/home/stefan/workspace/TroubleTicket/bin"/>
-        	<fileset dir="/home/stefan/workspace/TroubleTicket" includes="images/*"/>
+            <fileset dir="/home/stefan/workspace/TroubleTicket" includes="images/*"/>
             <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final" includes="hibernate3.jar"/>
             <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="antlr-2.7.6.jar"/>
             <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="commons-collections-3.1.jar"/>
@@ -39,7 +39,6 @@
 			    <param name="-qualify" />
 			    <param name="-types" />
 			    <param name="-visibility" />
-			    <param name="-all" />
 		    </doclet>
 
 	    </javadoc>
