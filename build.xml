@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project TroubleTicket with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="./TroubleTicket.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="de.articmodding.TroubleTicket.TroubleTicketManagement"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ hibernate3.jar antlr-2.7.6.jar commons-collections-3.1.jar dom4j-1.6.1.jar javassist-3.12.0.GA.jar jta-1.1.jar slf4j-api-1.6.1.jar hibernate-jpa-2.0-api-1.0.0.Final.jar mysql-connector-java-5.1.16-bin.jar UmlGraph-5.4.jar"/>
+            	<attribute name="SplashScreen-Image" value="images/splash.png"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="/home/stefan/workspace/TroubleTicket/bin"/>
+        	<fileset dir="/home/stefan/workspace/TroubleTicket" includes="images/*"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final" includes="hibernate3.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="antlr-2.7.6.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="commons-collections-3.1.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="dom4j-1.6.1.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="javassist-3.12.0.GA.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="jta-1.1.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required" includes="slf4j-api-1.6.1.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/jpa" includes="hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs/mysql-connector-java-5.1.16" includes="mysql-connector-java-5.1.16-bin.jar"/>
+            <zipfileset dir="/home/stefan/Programmierung/Java Libs" includes="UmlGraph-5.4.jar"/>
+        </jar>
+           
+	    <javadoc 
+	    sourcepath="src:resources" 
+        packagenames="de.articmodding.TroubleTicket"  
+	    destdir="doc" 
+        classpath="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/jpa/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/stefan/Programmierung/Java Libs/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/antlr-2.7.6.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/hibernate3.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/commons-collections-3.1.jar:/home/stefan/Programmierung/Java Libs/UmlGraph-5.4.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/slf4j-api-1.6.1.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/javassist-3.12.0.GA.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/dom4j-1.6.1.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/jta-1.1.jar" 
+	    private="true">
+
+		    <doclet name="org.umlgraph.doclet.UmlGraphDoc" path="/home/stefan/Programmierung/Java Libs/UmlGraph-5.4.jar">
+			    <param name="-attributes" />
+			    <param name="-operations" />
+			    <param name="-qualify" />
+			    <param name="-types" />
+			    <param name="-visibility" />
+			    <param name="-all" />
+		    </doclet>
+
+	    </javadoc>
+
+        <apply executable="dot" dest="." parallel="false">
+	        <arg value="-Tpng"/>
+	        <arg value="-o"/>
+	        <targetfile/>
+	        <srcfile/>
+	        <fileset dir="." includes="*.dot"/>
+	        <mapper type="glob" from="*.dot" to="*.png"/>
+        </apply>
+    </target>
+</project>

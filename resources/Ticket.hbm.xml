@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="de.articmodding.TroubleTicket.Ticket" table="tickets">	
+		<id name="id" type="int" column="id" >
+			<generator class="native"/>
+		</id>
+		<property name="ersteller" type="string">
+			<column name="ersteller" length="150" not-null="true" unique="false" />
+		</property>
+		<property name="erstellerEMail" type="string">
+			<column name="erstellerEMail" length="150" not-null="true" unique="false" />
+		</property>
+		<property name="betreff" type="string">
+			<column name="betreff" length="150" not-null="true" unique="false" />
+		</property>
+		<property name="text" type="text">
+			<column name="text" not-null="false" unique="false" />
+		</property>
+		<property name="status" type="int">
+			<column name="status" length="1" not-null="true" unique="false" />
+		</property>
+		<property name="prioritaet" type="int">
+			<column name="prioritaet" length="1" not-null="true" unique="false" />
+		</property>	
+		<property name="date" type="timestamp">
+			<column name="date" />
+		</property>
+	    <list name="replies" inverse="true">
+	         <key column="ticketId" />
+	         <list-index column="id" base="1"/>
+	         <one-to-many class="de.articmodding.TroubleTicket.TicketReply" />
+        </list>
+	</class>
+</hibernate-mapping>
