@@ -32,15 +32,20 @@
 	    destdir="doc" 
         classpath="/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/jpa/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/stefan/Programmierung/Java Libs/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/antlr-2.7.6.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/hibernate3.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/commons-collections-3.1.jar:/home/stefan/Programmierung/Java Libs/UmlGraph-5.4.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/slf4j-api-1.6.1.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/javassist-3.12.0.GA.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/dom4j-1.6.1.jar:/home/stefan/Programmierung/Java Libs/hibernate-distribution-3.6.3.Final/lib/required/jta-1.1.jar" 
 	    private="true">
-
 		    <doclet name="org.umlgraph.doclet.UmlGraphDoc" path="/home/stefan/Programmierung/Java Libs/UmlGraph-5.4.jar">
+		    	<!-- relationships between classes -->
+		    	<param name="-inferdepinpackage" />
+		    	<param name="-inferrel" />
+		    	<param name="-collpackages" value="java.util.*" />
+		    	<param name="-hide" value="java.*"/>
+		    	<!-- attribute for classes -->
 			    <param name="-attributes" />
+		    	<param name="-constructors" />
 			    <param name="-operations" />
 			    <param name="-qualify" />
 			    <param name="-types" />
 			    <param name="-visibility" />
 		    </doclet>
-
 	    </javadoc>
 
         <apply executable="dot" dest="." parallel="false">

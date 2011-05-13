@@ -2,7 +2,6 @@ package de.articmodding.TroubleTicket;
 
 import javax.swing.table.AbstractTableModel;
 
-
 public class TicketTableModel extends AbstractTableModel {
 	
 	private static final long serialVersionUID = 7454856361527841899L;

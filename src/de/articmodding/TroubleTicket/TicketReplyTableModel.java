@@ -2,7 +2,6 @@ package de.articmodding.TroubleTicket;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.table.AbstractTableModel;
 
 public class TicketReplyTableModel extends AbstractTableModel {
