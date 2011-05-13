@@ -302,6 +302,7 @@ public class TicketEditView extends JFrame {
 		erstellerEmailField.setText("");
 		betreffField.setText("");
 		textArea.setText("");
+		replyBetreff.setText("");
 		replyArea.setText("");
 	}
 

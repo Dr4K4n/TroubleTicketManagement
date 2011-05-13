@@ -8,7 +8,10 @@
   <property name="hibernate.connection.password">avSD3STthvsWGvRU</property>
   <property name="hibernate.connection.url">jdbc:mysql://83.169.42.96:3306/TroubleTicket</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+  <!-- show all SQL statements that hibernate is using -->
   <property name="hibernate.show_sql">true</property>
+  <!-- hibernate will create the tables if they don't exist -->
+  <property name="hibernate.hbm2ddl.auto">update</property>
   <mapping resource="TicketReply.hbm.xml"/>
   <mapping resource="Ticket.hbm.xml"/>
  </session-factory>

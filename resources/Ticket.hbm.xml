@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="de.articmodding.TroubleTicket.Ticket" table="tickets">	
+	<class name="de.articmodding.TroubleTicket.Ticket" table="db_tickets">	
 		<id name="id" type="int" column="id" >
 			<generator class="native"/>
 		</id>

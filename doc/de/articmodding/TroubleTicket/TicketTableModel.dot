@@ -20,7 +20,6 @@ digraph G {
 <tr><td align="left" balign="left"> - columnNames : String[] </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TicketTableModel(model : TicketModel) </td></tr>
 <tr><td align="left" balign="left"> + getColumnName(col : int) : String </td></tr>
 <tr><td align="left" balign="left"> + getValueAt(rowIndex : int, columnIndex : int) : Object </td></tr>
 <tr><td align="left" balign="left"> + getRowCount() : int </td></tr>
@@ -38,7 +37,6 @@ digraph G {
 <tr><td align="left" balign="left"> # listenerList : javax.swing.event.EventListenerList </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractTableModel() </td></tr>
 <tr><td align="left" balign="left"> + getColumnName(arg0 : int) : java.lang.String </td></tr>
 <tr><td align="left" balign="left"> + findColumn(arg0 : java.lang.String) : int </td></tr>
 <tr><td align="left" balign="left"> + getColumnClass(arg0 : int) : java.lang.Class&lt;?&gt; </td></tr>

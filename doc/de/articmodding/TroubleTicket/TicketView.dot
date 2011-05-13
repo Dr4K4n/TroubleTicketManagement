@@ -23,7 +23,6 @@ digraph G {
 <tr><td align="left" balign="left"> - exitButton : JButton </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TicketView() </td></tr>
 <tr><td align="left" balign="left"> + dispose() </td></tr>
 <tr><td align="left" balign="left"> - getJContentPane() : JPanel </td></tr>
 <tr><td align="left" balign="left"> + setNeuActionListener(al : ActionListener) </td></tr>
@@ -51,10 +50,6 @@ digraph G {
 <tr><td align="left" balign="left"> # accessibleContext : javax.accessibility.AccessibleContext </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + JFrame() </td></tr>
-<tr><td align="left" balign="left"> + JFrame(arg0 : java.awt.GraphicsConfiguration) </td></tr>
-<tr><td align="left" balign="left"> + JFrame(arg0 : java.lang.String) </td></tr>
-<tr><td align="left" balign="left"> + JFrame(arg0 : java.lang.String, arg1 : java.awt.GraphicsConfiguration) </td></tr>
 <tr><td align="left" balign="left"> # frameInit() </td></tr>
 <tr><td align="left" balign="left"> # createRootPane() : javax.swing.JRootPane </td></tr>
 <tr><td align="left" balign="left"> # processWindowEvent(arg0 : java.awt.event.WindowEvent) </td></tr>
